@@ -1,0 +1,83 @@
+//algoritmo sumar dos numeros
+#include <stdio.h>
+int main()
+{
+    int num1,num2,num3;
+    printf("\nIngrese primer numero: ");
+    scanf("%d",&num1);
+    printf("\nIngrese segundo numero: ");
+    scanf("%d",&num2);
+    num3=num1+num2;
+    printf("\nLa suma es: %d",num3);
+    return 0;
+}
+
+//algoritmo divisible para 3
+#include <stdio.h>
+int main()
+{
+    int num,suma,cos,res;
+    printf("\nIngrese el numero: ");
+    scanf("%d",&num);
+    suma=0;
+    cos=num;
+    do{
+      res=cos%10;
+      cos=cos/10;
+      suma=suma+res;
+    }while(cos!=0);
+    res=suma%3;
+    if(res==0){
+      printf("\nEl numero %d",num);
+      printf(" es divisible para tres");
+    }else{
+      printf("\nEl numero %d",num);
+      printf(" no es divisible para tres\n");
+    }
+    return 0;
+}
+
+//divisible para 5
+#include <stdio.h>
+int main()
+{
+    int num,res;
+    printf("\nIngrese el numero: ");
+    scanf("%d",&num);
+    res=num%10;
+    if(res==5 || res==0){
+        printf("\nEl numero: %d",num);
+        printf(" es divisible para 5");
+    }else{
+        printf("\nEl numero: %d",num);
+        printf(" no es divisible para 5");
+    }
+    return 0;
+}
+
+//algoritmo año bisiesto
+#include <stdio.h>
+int main()
+{
+    int anio,res,res2,res3,res4;
+    printf("\n Ingrese el anio: ");
+    scanf("%d",&anio);
+    res=anio%100;
+    if(res==0){
+        res2=anio%4;
+        res3=anio%400;
+        if(res2==0 && res3==0){
+            printf("\n El anio es bisiesto ");
+        }else{
+            printf("\n El anio no es bisiesto ");
+        }
+    }else{
+        res4=anio%4;
+        if(res4==0){
+            printf("\n El anio es bisiesto ");
+        }else{
+            printf("\n El anio no es bisiesto ");
+        }
+    }
+    return 0;
+}

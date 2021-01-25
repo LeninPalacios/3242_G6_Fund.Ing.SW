@@ -1,1 +1,16 @@
-
+//Numero de digitos de un numero
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("\nIngrese un numero: ");
+    scanf("%d",&num);
+    if(num<10){
+        printf("\nEl numero tiene un digito %d",num);
+    }else if(num<=99){
+        printf("\nEl numero tiene dos digito %d",num);
+    }else{
+        printf("\nEl numero tiene mas de dos digito %d",num);
+    }
+    return 0;
+}

@@ -3,14 +3,21 @@
 int main()
 {
     int num;
-    printf("\nIngrese un numero: ");
-    scanf("%d",&num);
+    float f;
+    do{
+        printf("\nIngrese un numero: ");
+        scanf("%f",&f);
+        num=f;
+        if(f-num!=0){
+            printf("\nEl numero no es entero, vuelva a ingresar");
+        }
+    }while(f-num!=0);
     if(num<10){
         printf("\nEl numero tiene un digito %d",num);
     }else if(num<=99){
         printf("\nEl numero tiene dos digito %d",num);
     }else{
-        printf("\nEl numero tiene mas de dos digito %d",num);
+        printf("\nEl numero tiene mas de dos digitos %d",num);
     }
     return 0;
 }

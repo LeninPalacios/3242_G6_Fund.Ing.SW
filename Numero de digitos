@@ -21,3 +21,5 @@ int main()
     }
     return 0;
 }
+
+//el Codigo si compila, y realiza  el  procedimieto  para saber cuantos digitos tiene el numero ingresado

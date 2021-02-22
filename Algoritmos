@@ -16,11 +16,11 @@ int main()
         scanf("%d",&num2);
     }
     num3=num1+num2;
-    printf("\nLa suma es: %d",num3);
+    printf("\nLa suma de %d+%d es: %d",num1,num2,num3);
     return 0;
 }
 
-//algoritmo divisible para 3
+//Prg2 algoritmo divisible para 3
 #include <stdio.h>
 int main()
 {
@@ -45,7 +45,7 @@ int main()
     return 0;
 }
 
-//divisible para 5
+//Prg3 divisible para 5
 #include <stdio.h>
 int main()
 {
@@ -63,7 +63,7 @@ int main()
     return 0;
 }
 
-//algoritmo año bisiesto
+//Prg 4 algoritmo año bisiesto
 #include <stdio.h>
 int main()
 {

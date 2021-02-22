@@ -1,4 +1,4 @@
-//algoritmo sumar dos numeros
+//algoritmo sumar dos numeros prg1
 #include <stdio.h>
 int main()
 {

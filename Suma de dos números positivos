@@ -1,4 +1,6 @@
 //algoritmo sumar dos numeros prg1
+//Revisado por Angelo Yanacallo, el codigo funciona correctamente y coincide con el codigo subido al drive,
+la validacion en la caja negra coincide con la comprobacion en el codeblocks.
 #include <stdio.h>
 int main()
 {

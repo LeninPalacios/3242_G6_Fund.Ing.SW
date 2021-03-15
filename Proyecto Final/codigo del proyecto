@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <Windows.h>
+
+int i,x1,x2,y1,y2,x,y;
+char nomp[15][20],cip[15][10],edad[15][4],sexo[15][9],telefp[15][10],medic[15][9],direc[15][50];
+char nomc[15][20],cic[15][10],paren[15][9],telefc[15][10],hora_ser[15][9],fecha[15][20],hora[15][20];
+int j=0,k=5;
+
+void gotoxy(int x,int y){
+    HANDLE hCon;
+    hCon=GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD dwPos;
+    dwPos.X=x;
+    dwPos.Y=y;
+    SetConsoleCursorPosition(hCon,dwPos);
+}
+void cuadro(int x1,int y1,int x2,int y2){
+    int i;
+    for(i=x1;i<x2;i++){
+        gotoxy(i,y1);printf("=");
+        gotoxy(i,y2);printf("=");
+    }
+    for(i=y1;i<y2;i++){
+        gotoxy(x1,i);printf("|");
+        gotoxy(x2,i);printf("|");
+    }
+    gotoxy(x1,y1);printf("=");
+    gotoxy(x1,y2);printf("=");
+    gotoxy(x2,y1);printf("=");
+    gotoxy(x2,y2);printf("=");
+}
+/*void validarcedula(char ced[15][10]){
+    int mul,sumimp=0,sump=0,c,dcsup,sum,digitov;
+    for(int i=0;i<9;i+=2){
+        mul=ced[j][i]*2;
+        if(mul>9)
+            mul=mul-9;
+        sump+=mul;
+    }
+    for(int i=1;i<10;i+=2){
+        sumimp+=ced[j][i];
+    }
+    sum=sump+sumimp;
+    c=sum/10;
+    dcsup=c*10+10;
+    digitov=dcsup-sum;
+    //if(digitov==10)
+        //digitov=0;
+    if(digitov!=ced[j][9]){
+        gotoxy(2,22);printf("                   ");
+                          //12345678901234567890123456789012
+        gotoxy(2,22);printf("Error, ingrese cedula valida: ");
+        gotoxy(32,22);scanf("%s",&cip[j]);
+    }
+}
+*/
+

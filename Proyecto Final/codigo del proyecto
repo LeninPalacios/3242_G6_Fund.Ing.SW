@@ -54,4 +54,49 @@ void cuadro(int x1,int y1,int x2,int y2){
     }
 }
 */
+void ingresar_paciente(){
+    int v;
+    cuadro(0,20,115,28);//cuadro ingreso
+    cuadro(1,18,22,20);//cuadro "datos de paciente"
+    cuadro(0,0,115,28);//margen
+    cuadro(50,1,64,3);//cuadro titulo
+    gotoxy(52,2);printf("Hogar Feliz\n\n");
+    //funcion ingresar paciente
+    gotoxy(2,19);printf("Datos del paciente:");
+                      //1234567890123456789012345678901234
+    gotoxy(2,21);printf("Nombre y apellido del Paciente: ");
+    gotoxy(2,22);printf("Cedula: ");
+    gotoxy(2,23);printf("Edad del paciente: ");
+    gotoxy(2,24);printf("Sexo: ");
+    gotoxy(2,25);printf("Telefono: ");
+    gotoxy(2,26);printf("¿Toma medicamentos?(Si/No): ");
+    gotoxy(2,27);printf("Direccion: ");
+    fflush(stdin);
+    gotoxy(34,21);scanf("%[^\n]",&nomp[j]);
+    gotoxy(10,22);scanf("%s",&cip[j]);
+    //validarcedula(cip);
+    gotoxy(21,23);scanf("%s",&edad[j]);
+    gotoxy(8,24);scanf("%s",&sexo[j]);
+    gotoxy(12,25);scanf("%s",&telefp[j]);
+    gotoxy(30,26);scanf("%s",&medic[j]);
+    gotoxy(13,27);scanf("%s",&direc[j]);
 
+}
+void imprimir_paciente(){
+    //funcion imprimir paciente
+    k=5;
+                     //12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789
+    gotoxy(2,4);printf("| Nombre del Paciente |CI del Paciente|Edad|  Sexo   | Telefono |Medicamentos|Direccion|");
+    for(int i=0;i<=j;i++){
+        gotoxy(3,k);printf("%s",nomp[i]);
+        gotoxy(27,k);printf("%s",cip[i]);
+        gotoxy(42,k);printf("%s",edad[i]);
+        gotoxy(46,k);printf("%s",sexo[i]);
+        gotoxy(56,k);printf("%s",telefp[i]);
+        gotoxy(70,k);printf("%s",medic[i]);
+        gotoxy(80,k);printf("%s",direc[i]);
+        k++;
+    }
+    gotoxy(47,24);system("pause");
+
+}

@@ -100,3 +100,77 @@ void imprimir_paciente(){
     gotoxy(47,24);system("pause");
 
 }
+int salir(int a){
+                        //7890123456789012345678901234567890123456789
+    gotoxy(47,23);printf("Ingrese 1 para terminar el programa: ");
+    gotoxy(84,23);scanf("%d",&a);
+    return(a);
+}
+void borrar(){
+    Sleep(1600);
+    system("cls");
+}
+void ingresar_cliente(){
+    //datos de la persona a cargo
+    cuadro(0,20,115,28);//cuadro ingreso
+    cuadro(1,18,31,20);//cuadro "datos de paciente"
+    cuadro(0,0,115,28);//margen
+    cuadro(50,1,64,3);//cuadro titulo
+    gotoxy(52,2);printf("Hogar Feliz\n\n");
+    //funcion ingresar paciente
+    gotoxy(2,19);printf("Datos del cliente:");
+                      //1234567890123456789012345678901234567890123456
+    gotoxy(2,21);printf("Nombre y apellido: ");
+    gotoxy(2,22);printf("Cedula: ");
+    gotoxy(2,23);printf("Parentesco: ");
+    gotoxy(2,24);printf("Telefono: ");
+    gotoxy(2,25);printf("Numero de horas que desea el servicio: ");
+    gotoxy(2,26);printf("Fecha: ");
+    gotoxy(2,27);printf("Hora: ");
+    fflush(stdin);
+    gotoxy(21,21);scanf("%[^\n]",&nomc[j]);
+    gotoxy(10,22);scanf("%s",&cic[j]);
+    gotoxy(14,23);scanf("%s",&paren[j]);
+    gotoxy(12,24);scanf("%s",&telefc[j]);
+    gotoxy(41,25);scanf("%s",&hora_ser[j]);
+    fflush(stdin);
+    gotoxy(9,26);scanf("%[^\n]",&fecha[j]);
+    fflush(stdin);
+    gotoxy(8,27);scanf("%[^\n]",&hora[j]);
+}
+void imprimir_cliente(){
+    //funcion imprimir paciente
+    k=5;
+                     //12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012
+    gotoxy(2,4);printf("| Nombre del Cliente |CI del Cliente|Parentesco|  Telefono  |Hrs. Servicio| Fecha  | Hora |");
+    for(int i=0;i<=j;i++){
+        gotoxy(3,k);printf("%s",nomc[i]);
+        gotoxy(25,k);printf("%s",cic[i]);
+        gotoxy(39,k);printf("%s",paren[i]);
+        gotoxy(50,k);printf("%s",telefc[i]);
+        gotoxy(67,k);printf("%s",hora_ser[i]);
+        gotoxy(77,k);printf("%s",fecha[i]);
+        gotoxy(86,k);printf("%s",hora[i]);
+        k++;
+    }
+
+}
+
+int main(){
+    int a;
+
+    do{
+        borrar();
+        //borrar_paciente();
+        ingresar_paciente();
+        imprimir_paciente();
+        borrar();
+        ingresar_cliente();
+        imprimir_cliente();
+        a=salir(a);
+        j++;
+        k++;
+    }while(a!=1&&k<15);
+    borrar();
+    return 0;
+}
